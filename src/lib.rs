@@ -1,7 +1,8 @@
-pub mod parser;
-pub mod render;
-pub mod types;
+// use umlgen::parser;
+// pub fn parse(lang: crate::parser::LangChoice) {
+//     println!("Hello world!!!");
+// }
 
-pub use parser::file_parser;
-pub use render::{render_plantuml, PlantUml};
-pub use types::{Entity, EntityType};
+pub mod generator;
+pub mod parser;
+pub mod uml;

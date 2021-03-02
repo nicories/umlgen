@@ -3,6 +3,11 @@ use std::iter::FromIterator;
 
 use super::PlantUml;
 
+enum Day {
+    Monday,
+    Tuesday,
+}
+
 #[derive(Clone, Debug, PartialEq, Eq, Hash)]
 pub struct Entity {
     pub entity_type: EntityType,
@@ -10,6 +15,17 @@ pub struct Entity {
     pub fields: Vec<Entity>,
 }
 
+struct Class2 {
+    pub field_1: String,
+    pub field_2: i32,
+}
+
+impl Class2 {
+    pub fn func1(arg1: i32) -> Self {
+        Class2
+    }
+    pub fn func2() {}
+}
 impl Entity {
     pub fn new(entity_type: EntityType, name: &str, fields: Vec<Entity>) -> Self {
         Entity {

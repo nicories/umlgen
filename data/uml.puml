@@ -1,0 +1,29 @@
+@startuml
+
+class Device {
++rcv_msg[MAX_LINE] : char
++host_ip[15] : char
++Device()
++ip_to_number(a : char, b : char, c : char): string
++enter_ip(): void
++exit(): void
++get_ip(): void
++single(*game : Game): bool
++menu(texts : vector<string>): int
++error(s : std::string): void
++server(*game : Game, &server_socket : int, &connected : bool, &leave : bool, player : int): void
++host(*game : Game): bool
++join(*game : Game): bool
+}
+Device --> Display : display
+
+cpp.h
+
+class Entity {
++field_1 : String
++field_2 : i32
+-render(): String
+-render_dependencies(source : Vec<String>): String
+}
+
+@enduml
